@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(
     cors({
         origin: [
-            "http://localhost:5173"
+            process.env.CLIENT_URL || "https://taskify-nu-gold.vercel.app"
         ],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
